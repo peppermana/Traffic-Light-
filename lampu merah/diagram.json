@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "author": "Permana Permana",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 123.15, "left": 97.96, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -50.71,
+      "left": 147.24,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -61.34,
+      "left": 222.4,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -48.27,
+      "left": 300.78,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 43.15,
+      "left": 325.03,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 42.36,
+      "left": 248.68,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "led3:A", "r1:1", "red", [ "v63.31", "h-1.42" ] ],
+    [ "r1:2", "uno:2", "red", [ "v62.74", "h-45.48" ] ],
+    [ "led2:A", "r2:1", "red", [ "v0" ] ],
+    [ "r2:2", "uno:3", "red", [ "v61.66", "h15.95" ] ],
+    [ "led1:A", "uno:4", "red", [ "v128.26", "h145.59" ] ],
+    [ "led1:C", "uno:GND.1", "green", [ "v211.29", "h53.9" ] ],
+    [ "led2:C", "uno:GND.1", "green", [ "v117.43", "h-22.19" ] ],
+    [ "led3:C", "uno:GND.1", "green", [ "v112.76", "h-47.4" ] ]
+  ]
+}
